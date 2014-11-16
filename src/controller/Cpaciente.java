@@ -1,15 +1,40 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package controller;
 
-/**
- *
- * @author 631210019
- */
-public class Cpaciente {
-    
+public class Cpaciente implements Imed{
+    @Override
+    public void insert(Object paciente) {
+        try {
+            // TODO dar insert no banco com o objeto paciente que esta em parametro
+        } catch (Exception e) {
+            
+        }
+    }
+
+    @Override
+    public Object select(int id) {
+        try {
+            // TODO retornar o objeto com os dados do paciente buscado do banco
+            return null;
+        } catch (Exception e) {
+            return e.getMessage();
+        }
+    }
+
+    @Override
+    public void update(Object paciente) {
+        try {
+            // TODO dar update no banco com o objeto paciente que esta em parametro
+        } catch (Exception e) {
+            
+        }
+    }
+
+    @Override
+    public void delete(Object paciente) {
+        try {
+            // TODO dar delete no banco com o objeto paciente que esta em parametro
+        } catch (Exception e) {
+            
+        }
+    }
 }
