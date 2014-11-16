@@ -1,13 +1,19 @@
 package controller;
 
-public class Cmedico implements Imed{
+import DB.connection;
+import java.sql.Statement;
+
+public class Cmedico implements Imed {
 
     @Override
     public void insert(Object medico) {
         try {
-            // TODO dar insert no banco com o objeto medico que esta em parametro
+            connection con = new connection();
+            Statement stm = con.criaConexao();
+            stm.executeUpdate("");
+            con.fechaConexao();
         } catch (Exception e) {
-            
+
         }
     }
 
@@ -24,19 +30,24 @@ public class Cmedico implements Imed{
     @Override
     public void update(Object medico) {
         try {
-            // TODO dar insert no banco com o objeto medico que esta em parametro
+            connection con = new connection();
+            Statement stm = con.criaConexao();
+            stm.executeUpdate("");
+            con.fechaConexao();
         } catch (Exception e) {
-            
+
         }
     }
 
     @Override
     public void delete(Object medico) {
         try {
-            // TODO dar insert no banco com o objeto medico que esta em parametro
+            connection con = new connection();
+            Statement stm = con.criaConexao();
+            stm.executeUpdate("");
+            con.fechaConexao();
         } catch (Exception e) {
-            
+
         }
     }
-    
 }
