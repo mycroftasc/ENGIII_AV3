@@ -9,7 +9,7 @@ public class Cexame implements Imed {
     public void insert(Object exame) {
         try {
             connection con = new connection();
-            Statement stm = con.criaConexao();
+            Statement stm = con.connection();
             stm.executeUpdate("");
             con.fechaConexao();
         } catch (Exception e) {
@@ -31,7 +31,7 @@ public class Cexame implements Imed {
     public void update(Object exame) {
         try {
             connection con = new connection();
-            Statement stm = con.criaConexao();
+            Statement stm = con.connection();
             stm.executeUpdate("");
             con.fechaConexao();
         } catch (Exception e) {
@@ -43,7 +43,7 @@ public class Cexame implements Imed {
     public void delete(Object exame) {
         try {
             connection con = new connection();
-            Statement stm = con.criaConexao();
+            Statement stm = con.connection();
             stm.executeUpdate("");
             con.fechaConexao();
         } catch (Exception e) {

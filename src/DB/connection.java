@@ -9,7 +9,7 @@ public class connection {
     private Connection con;
     private Statement stm;
 
-    public Statement criaConexao() throws Exception {
+    public void criaConexao() throws Exception {
         String url = "jdbc:postgresql://localhost:5432/SenacMed";
         String usuario = "postgres";
         String senha = "root";
@@ -19,10 +19,18 @@ public class connection {
         this.con = DriverManager.getConnection(url, usuario, senha);
 
         this.stm = con.createStatement();
-        return this.stm;
     }
 
     public void fechaConexao() throws Exception {
         this.con.close();
+    }
+    
+    public Statement connection() throws Exception{
+       
+        if(this.stm == null){
+            criaConexao();
+        }
+        
+        return this.stm;
     }
 }

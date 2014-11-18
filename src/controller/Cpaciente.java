@@ -9,7 +9,7 @@ public class Cpaciente implements Imed {
     public void insert(Object paciente) {
         try {
             connection con = new connection();
-            Statement stm = con.criaConexao();
+            Statement stm = con.connection();
             stm.executeUpdate("");
             con.fechaConexao();
         } catch (Exception e) {
@@ -31,7 +31,7 @@ public class Cpaciente implements Imed {
     public void update(Object paciente) {
         try {
             connection con = new connection();
-            Statement stm = con.criaConexao();
+            Statement stm = con.connection();
             stm.executeUpdate("");
             con.fechaConexao();
         } catch (Exception e) {
@@ -43,7 +43,7 @@ public class Cpaciente implements Imed {
     public void delete(Object paciente) {
         try {
             connection con = new connection();
-            Statement stm = con.criaConexao();
+            Statement stm = con.connection();
             stm.executeUpdate("");
             con.fechaConexao();
         } catch (Exception e) {
