@@ -151,32 +151,33 @@ public class Principal {
     }
 
     public void mainMenu() {
+        do {
+            this.showMenuOptions();
 
-        this.showMenuOptions();
-
-        switch (op) {
-            case 0: {
-                System.exit(0);
-                break;
+            switch (op) {
+                case 0: {
+                    System.exit(0);
+                    break;
+                }
+                case 1: {
+                    this.menuMedico();
+                    break;
+                }
+                case 2: {
+                    this.menuPaciente();
+                    break;
+                }
+                case 3: {
+                    this.menuExame();
+                    break;
+                }
+                default: {
+                    System.out.println("Opcao inexistente, tente novamente \n\n\n");
+                    this.showMenuOptions();
+                    break;
+                }
             }
-            case 1: {
-                this.menuMedico();
-                break;
-            }
-            case 2: {
-                this.menuPaciente();
-                break;
-            }
-            case 3: {
-                this.menuExame();
-                break;
-            }
-            default: {
-                System.out.println("Opcao inexistente, tente novamente \n\n\n");
-                this.showMenuOptions();
-                break;
-            }
-        }
+        } while (op != 0);
 
     }
 }
