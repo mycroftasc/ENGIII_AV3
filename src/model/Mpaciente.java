@@ -1,6 +1,6 @@
 package model;
 
-public class Mpaciente {
+public class Mpaciente implements Pessoa{
     private String cpf;
     private String nome;
     private String endereco;
@@ -18,6 +18,7 @@ public class Mpaciente {
         this.cpf = cpf;
     }
 
+    @Override
     public String getNome() {
         return nome;
     }
@@ -26,6 +27,7 @@ public class Mpaciente {
         this.nome = nome;
     }
 
+    @Override
     public String getEndereco() {
         return endereco;
     }
@@ -34,6 +36,7 @@ public class Mpaciente {
         this.endereco = endereco;
     }
 
+    @Override
     public String getCidade() {
         return cidade;
     }
@@ -42,6 +45,7 @@ public class Mpaciente {
         this.cidade = cidade;
     }
 
+    @Override
     public String getUf() {
         return uf;
     }

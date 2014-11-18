@@ -1,6 +1,6 @@
 package model;
 
-public class Mmedico {
+public class Mmedico implements Pessoa{
     private String nome;
     private String crm;
     private String endereco;
@@ -9,6 +9,7 @@ public class Mmedico {
     private String telefone;
     private String email;
 
+    @Override
     public String getNome() {
         return nome;
     }
@@ -25,6 +26,7 @@ public class Mmedico {
         this.crm = crm;
     }
 
+    @Override
     public String getEndereco() {
         return endereco;
     }
@@ -33,6 +35,7 @@ public class Mmedico {
         this.endereco = endereco;
     }
 
+    @Override
     public String getCidade() {
         return cidade;
     }
@@ -41,6 +44,7 @@ public class Mmedico {
         this.cidade = cidade;
     }
 
+    @Override
     public String getUf() {
         return uf;
     }
