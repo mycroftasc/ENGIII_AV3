@@ -4,7 +4,7 @@ import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class connection {
+public class Conexao {
 
     private Connection con;
     private Statement stm;

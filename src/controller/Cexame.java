@@ -1,17 +1,20 @@
 package controller;
 
-import DB.connection;
+import DB.Conexao;
+import java.sql.ResultSet;
 import java.sql.Statement;
 import model.Mexame;
+import model.Mpaciente;
 
 public class Cexame implements Iexame {
 
     @Override
     public void insert(Mexame exame) {
         try {
-            connection con = new connection();
+            Conexao con = new Conexao();
             Statement stm = con.connection();
-            stm.executeUpdate("");
+            stm.executeUpdate("INSERT INTO exame (descexame, valorunit)\n" +
+"VALUES ('',);");
             con.fechaConexao();
         } catch (Exception e) {
 
@@ -21,8 +24,16 @@ public class Cexame implements Iexame {
     @Override
     public Mexame select(int id) {
         try {
-            // TODO retornar o objeto com os dados do paciente buscado do banco
-            return null;
+            Conexao con = new Conexao();
+            Statement stm = con.connection();
+            ResultSet rs =  stm.executeQuery("SELECT * FROM exame");
+            Mexame exam = new Mexame();
+            while (rs.next()) {                
+                exam.setDescExame(rs.getString("descexame"));
+                exam.setValorUnit(rs.getDouble("valorunit"));
+            }
+            con.fechaConexao();
+            return exam;
         } catch (Exception e) {
             System.err.println(e.getMessage());
            
@@ -33,9 +44,9 @@ public class Cexame implements Iexame {
     @Override
     public void update(Mexame exame) {
         try {
-            connection con = new connection();
+            Conexao con = new Conexao();
             Statement stm = con.connection();
-            stm.executeUpdate("");
+            stm.executeUpdate("UPDATE exame SET descexame = '', valorunit =  WHERE codexame = ;");
             con.fechaConexao();
         } catch (Exception e) {
 
@@ -45,9 +56,9 @@ public class Cexame implements Iexame {
     @Override
     public void delete(Mexame exame) {
         try {
-            connection con = new connection();
+            Conexao con = new Conexao();
             Statement stm = con.connection();
-            stm.executeUpdate("");
+            stm.executeUpdate("DELETE FROM exame WHERE codexame = ;");
             con.fechaConexao();
         } catch (Exception e) {
 

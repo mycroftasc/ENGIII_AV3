@@ -15,6 +15,6 @@ import model.Mpaciente;
 public interface Ipaciente {
     void insert(Mpaciente obj);
     Mpaciente select(int id);
-    void update(Mpaciente obj);
-    void delete(Mpaciente obj);
+    void update(Mpaciente obj, int id);
+    void delete(Mpaciente obj, int id);
 }
