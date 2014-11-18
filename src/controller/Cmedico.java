@@ -2,11 +2,12 @@ package controller;
 
 import DB.connection;
 import java.sql.Statement;
+import model.Mmedico;
 
 public class Cmedico implements Imed {
 
     @Override
-    public void insert(Object medico) {
+    public void insert(Mmedico medico) {
         try {
             connection con = new connection();
             Statement stm = con.connection();
@@ -18,17 +19,18 @@ public class Cmedico implements Imed {
     }
 
     @Override
-    public Object select(int id) {
+    public Mmedico select(int id) {
         try {
             // TODO retornar o objeto com os dados do paciente buscado do banco
             return null;
         } catch (Exception e) {
-            return e.getMessage();
+             System.out.println(e.getMessage());
+             return null;
         }
     }
 
     @Override
-    public void update(Object medico) {
+    public void update(Mmedico medico) {
         try {
             connection con = new connection();
             Statement stm = con.connection();
@@ -40,7 +42,7 @@ public class Cmedico implements Imed {
     }
 
     @Override
-    public void delete(Object medico) {
+    public void delete(Mmedico medico) {
         try {
             connection con = new connection();
             Statement stm = con.connection();

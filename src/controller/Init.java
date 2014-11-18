@@ -17,8 +17,11 @@ public class Init {
     /**
      * @param args the command line arguments
      */
-   // public static void main(String[] args) {
-        Principal principal = new Principal();
-   // }
+    public static void main(String[] args) {
+        Principal principal;
+        principal = new Principal();
+        principal.setVisible(true);
+        
+    }
     
 }

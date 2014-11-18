@@ -2,11 +2,12 @@ package controller;
 
 import DB.connection;
 import java.sql.Statement;
+import model.Mexame;
 
-public class Cexame implements Imed {
+public class Cexame implements Iexame {
 
     @Override
-    public void insert(Object exame) {
+    public void insert(Mexame exame) {
         try {
             connection con = new connection();
             Statement stm = con.connection();
@@ -18,17 +19,19 @@ public class Cexame implements Imed {
     }
 
     @Override
-    public Object select(int id) {
+    public Mexame select(int id) {
         try {
             // TODO retornar o objeto com os dados do paciente buscado do banco
             return null;
         } catch (Exception e) {
-            return e.getMessage();
+            System.err.println(e.getMessage());
+           
+            return null;
         }
     }
 
     @Override
-    public void update(Object exame) {
+    public void update(Mexame exame) {
         try {
             connection con = new connection();
             Statement stm = con.connection();
@@ -40,7 +43,7 @@ public class Cexame implements Imed {
     }
 
     @Override
-    public void delete(Object exame) {
+    public void delete(Mexame exame) {
         try {
             connection con = new connection();
             Statement stm = con.connection();

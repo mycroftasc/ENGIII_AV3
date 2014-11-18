@@ -1,8 +1,10 @@
 package controller;
 
+import model.Mmedico;
+
 public interface Imed {
-    void insert(Object obj);
-    Object select(int id);
-    void update(Object obj);
-    void delete(Object obj);
+    void insert(Mmedico obj);
+    Mmedico select(int id);
+    void update(Mmedico obj);
+    void delete(Mmedico obj);
 }
