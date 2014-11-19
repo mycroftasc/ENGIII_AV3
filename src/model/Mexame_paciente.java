@@ -1,11 +1,15 @@
 package model;
 
+import model.Mexame;
+import model.Mmedico;
+import model.Mpaciente;
+
 /**
  *
  * @author Administrador
  */
 public class Mexame_paciente {
-    private Mexame medico;
+    private Mmedico medico;
     private Mpaciente paciente;
     private Mexame exame;
     private String dtexame;
@@ -15,14 +19,14 @@ public class Mexame_paciente {
     /**
      * @return the medico
      */
-    public Mexame getMedico() {
+    public Mmedico getMedico() {
         return medico;
     }
 
     /**
      * @param medico the medico to set
      */
-    public void setMedico(Mexame medico) {
+    public void setMedico(Mmedico medico) {
         this.medico = medico;
     }
 
